@@ -1,0 +1,60 @@
+<section class="menu-section">
+  <div class="container">
+    <h1 class="section-title" @fadeIn>{{ l10n.get('menu.title') }}</h1>
+    
+    <div class="categories-container" @fadeIn>
+      <div class="categories-scroll">
+        <button 
+          *ngFor="let category of categories" 
+          class="category-btn"
+          [class.active]="selectedCategory === category"
+          (click)="selectCategory(category)">
+          {{ category }}
+        </button>
+      </div>
+    </div>
+    
+    <div class="menu-info" *ngIf="menuItems.length > 0">
+      <p class="items-count">{{ menuItems.length }} produit{{ menuItems.length > 1 ? 's' : '' }} disponible{{ menuItems.length > 1 ? 's' : '' }}</p>
+    </div>
+    
+    <div class="menu-grid" *ngIf="menuItems.length > 0">
+      <div *ngFor="let item of menuItems; let i = index" class="menu-item" [@slideInUp]>
+        <p-card [style]="{'width': '100%', 'height': '100%'}" styleClass="menu-card">
+          <ng-template pTemplate="header">
+            <div class="card-image">
+              <img [src]="item.image" [alt]="item.name" />
+              <div class="category-badge">{{ item.category }}</div>
+            </div>
+          </ng-template>
+          
+          <div class="card-content">
+            <h3>{{ item.name }}</h3>
+            <p class="description">{{ item.description }}</p>
+            
+            <div class="badges" *ngIf="item.badges && item.badges.length > 0">
+              <p-tag *ngFor="let badge of item.badges" [value]="badge" severity="info"></p-tag>
+            </div>
+            
+            <div class="card-footer">
+              <span class="price">{{ item.price }} FCFA</span>
+              <p-button 
+                label="{{ l10n.get('menu.order') }}" 
+                icon="pi pi-shopping-cart"
+                (onClick)="orderViaWhatsApp(item)"
+                [style]="{'width': '100%'}"
+                styleClass="p-button-primary">
+              </p-button>
+            </div>
+          </div>
+        </p-card>
+      </div>
+    </div>
+    
+    <div class="no-items" *ngIf="menuItems.length === 0">
+      <i class="pi pi-inbox"></i>
+      <p>Aucun produit dans cette catégorie pour le moment.</p>
+    </div>
+  </div>
+</section>
+

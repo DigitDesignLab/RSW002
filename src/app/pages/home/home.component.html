@@ -1,0 +1,40 @@
+<section class="hero-section" @fadeIn>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">{{ l10n.get('home.hero.title') }}</h1>
+    <p class="hero-subtitle">{{ l10n.get('home.hero.subtitle') }}</p>
+    <div class="hero-buttons">
+      <a routerLink="/menu" class="btn btn-primary">
+        <i class="pi pi-shopping-cart"></i>
+        {{ l10n.get('home.hero.order') }}
+      </a>
+      <a routerLink="/contact" class="btn btn-secondary">
+        <i class="pi pi-map-marker"></i>
+        {{ l10n.get('home.hero.find') }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="features-section">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card" @slideInUp>
+        <i class="pi pi-clock"></i>
+        <h3>Ouvert tous les jours</h3>
+        <p>06h00 - 23h00</p>
+      </div>
+      <div class="feature-card" @slideInUp>
+        <i class="pi pi-truck"></i>
+        <h3>Livraison rapide</h3>
+        <p>Service de livraison disponible</p>
+      </div>
+      <div class="feature-card" @slideInUp>
+        <i class="pi pi-star"></i>
+        <h3>Meilleur de la ville</h3>
+        <p>Reconnu et apprécié</p>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,30 @@
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>La Boulangerie Pâtisserie Sofia</h3>
+      <p>Sebenikoro, Bamako</p>
+      <p>74 74 03 03</p>
+      <p>Ouvert tous les jours de 06h00 à 23h00</p>
+    </div>
+    
+    <div class="footer-section">
+      <h3>{{ l10n.get('footer.follow') }}</h3>
+      <div class="social-links">
+        <a [href]="instagramUrl" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+          <i class="pi pi-instagram"></i>
+        </a>
+        <a [href]="tiktokUrl" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+          <i class="pi pi-send"></i>
+        </a>
+        <a [href]="'https://wa.me/223' + phone" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+          <i class="pi pi-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; {{ currentYear }} La Boulangerie Pâtisserie Sofia. {{ l10n.get('footer.rights') }}.</p>
+  </div>
+</footer>
+

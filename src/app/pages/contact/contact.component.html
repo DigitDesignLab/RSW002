@@ -1,0 +1,125 @@
+<section class="contact-section">
+  <div class="container">
+    <h1 class="section-title" @fadeIn>{{ l10n.get('contact.title') }}</h1>
+    
+    <div class="contact-intro" @fadeIn>
+      <p>Nous sommes là pour vous ! N'hésitez pas à nous contacter pour toute question ou commande.</p>
+    </div>
+    
+    <div class="contact-grid">
+      <div class="contact-info" @slideInLeft>
+        <p-card>
+          <h2>Informations de contact</h2>
+          
+          <div class="contact-item">
+            <i class="pi pi-map-marker"></i>
+            <div>
+              <h3>Adresse</h3>
+              <p>{{ l10n.get('contact.address') }}</p>
+              <p class="address-detail">Facilement accessible, parking disponible</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="pi pi-phone"></i>
+            <div>
+              <h3>Téléphone</h3>
+              <p class="phone-number">{{ phoneDisplay }}</p>
+              <p class="phone-detail">Appelez-nous pour vos commandes ou questions</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="pi pi-clock"></i>
+            <div>
+              <h3>Horaires d'ouverture</h3>
+              <p>{{ l10n.get('contact.hours') }}</p>
+              <div class="hours-detail">
+                <div class="hours-item">
+                  <span class="day">Lundi - Dimanche</span>
+                  <span class="time">06h00 - 23h00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="pi pi-whatsapp"></i>
+            <div>
+              <h3>WhatsApp</h3>
+              <p>Commandez directement via WhatsApp</p>
+              <p class="whatsapp-detail">Réponse rapide garantie</p>
+            </div>
+          </div>
+          
+          <div class="contact-actions">
+            <p-button 
+              [label]="l10n.get('contact.call')" 
+              icon="pi pi-phone"
+              (onClick)="callPhone()"
+              [style]="{'width': '100%', 'margin-bottom': '1rem'}"
+              styleClass="p-button-primary">
+            </p-button>
+            <p-button 
+              [label]="l10n.get('contact.map')" 
+              icon="pi pi-map"
+              (onClick)="openMaps()"
+              [style]="{'width': '100%'}"
+              styleClass="p-button-secondary">
+            </p-button>
+          </div>
+        </p-card>
+      </div>
+      
+      <div class="contact-map" @slideInRight>
+        <p-card>
+          <h2>Localisation</h2>
+          <p class="map-description">Trouvez-nous facilement à Sebenikoro, Bamako</p>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.5!2d-8.0470546!3d12.6075127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe51cb0aa4a6d0af%3A0xd8b972b2a9664bf5!2sBoulangerie%20P%C3%A2tisserie%20Sofia!5e0!3m2!1sfr!2sml!4v1705920000000!5m2!1sfr!2sml"
+              width="100%" 
+              height="400" 
+              style="border:0; border-radius: 10px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          
+          <div class="directions-info">
+            <h3>Comment nous trouver ?</h3>
+            <ul class="directions-list">
+              <li><i class="pi pi-check"></i> Situé au cœur de Sebenikoro</li>
+              <li><i class="pi pi-check"></i> Accessible en voiture et en transport en commun</li>
+              <li><i class="pi pi-check"></i> Parking disponible à proximité</li>
+              <li><i class="pi pi-check"></i> Facilement repérable avec notre enseigne</li>
+            </ul>
+          </div>
+        </p-card>
+      </div>
+    </div>
+    
+    <div class="contact-social" @slideInUp>
+      <p-card>
+        <h2>Suivez-nous sur les réseaux sociaux</h2>
+        <p class="social-description">Restez connecté avec nous pour découvrir nos nouveautés et promotions</p>
+        <div class="social-buttons">
+          <a href="https://www.instagram.com/boulangeriesofia" target="_blank" rel="noopener noreferrer" class="social-btn instagram">
+            <i class="pi pi-instagram"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.tiktok.com/@sofiaboulangerie74740303" target="_blank" rel="noopener noreferrer" class="social-btn tiktok">
+            <i class="pi pi-send"></i>
+            <span>TikTok</span>
+          </a>
+          <a href="https://wa.me/22374740303" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp">
+            <i class="pi pi-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </p-card>
+    </div>
+  </div>
+</section>
+

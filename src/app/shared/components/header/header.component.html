@@ -1,0 +1,24 @@
+<header class="header">
+  <nav class="nav-container">
+    <div class="nav-brand">
+      <a routerLink="/" class="brand-link">
+        <h1 class="brand-title">La Boulangerie Pâtisserie Sofia</h1>
+      </a>
+    </div>
+    
+    <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-label="Menu">
+      <span class="hamburger-line" [class.active]="isMenuOpen"></span>
+      <span class="hamburger-line" [class.active]="isMenuOpen"></span>
+      <span class="hamburger-line" [class.active]="isMenuOpen"></span>
+    </button>
+    
+    <ul class="nav-menu" [class.active]="isMenuOpen">
+      <li><a routerLink="/" routerLinkActive="active" (click)="closeMenu()">{{ l10n.get('nav.home') }}</a></li>
+      <li><a routerLink="/menu" routerLinkActive="active" (click)="closeMenu()">{{ l10n.get('nav.menu') }}</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">{{ l10n.get('nav.about') }}</a></li>
+      <li><a routerLink="/delivery" routerLinkActive="active" (click)="closeMenu()">{{ l10n.get('nav.delivery') }}</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">{{ l10n.get('nav.contact') }}</a></li>
+    </ul>
+  </nav>
+</header>
+
