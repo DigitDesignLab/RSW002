@@ -78,6 +78,32 @@ src/
 └── styles.css                 # Styles globaux
 ```
 
+## 🚀 Déploiement sur Vercel
+
+Le projet est configuré pour être déployé sur [Vercel](https://vercel.com).
+
+### Option 1 : Via le site Vercel (recommandé)
+
+1. Poussez votre code sur **GitHub**, **GitLab** ou **Bitbucket**.
+2. Allez sur [vercel.com](https://vercel.com) et connectez-vous.
+3. Cliquez sur **Add New Project** et importez le dépôt.
+4. Vercel détecte automatiquement Angular et utilise `vercel.json`. Cliquez sur **Deploy**.
+
+### Option 2 : Via la CLI Vercel
+
+```bash
+# Installer la CLI Vercel
+npm i -g vercel
+
+# Dans le dossier du projet
+vercel
+
+# Pour un déploiement en production
+vercel --prod
+```
+
+**Note :** Si le build échoue à cause du chemin de sortie, modifiez dans `vercel.json` la clé `outputDirectory` en `dist/BoulangerieSofia/browser` (selon la version d’Angular).
+
 ## 🎯 Optimisations
 
 - Lazy loading des modules
