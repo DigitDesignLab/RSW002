@@ -1,246 +1,257 @@
 .about-section {
-  padding: 4rem 2rem;
+  padding: 3rem 1.5rem 4rem;
   min-height: 80vh;
-  background: linear-gradient(to bottom, #F5F5F5 0%, #FFF 100%);
+  background: linear-gradient(180deg, #FFF8F5 0%, #FFF 50%, #FFF8F5 100%);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .section-title {
   text-align: center;
-  font-size: 3rem;
-  color: #2C1810;
-  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #FF6B35 0%, #FFD93D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2rem;
   font-weight: 700;
 }
 
-.about-intro {
-  text-align: center;
+.about-hero {
   margin-bottom: 3rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
 }
 
-.intro-text {
-  font-size: 1.2rem;
-  color: #666;
-  line-height: 1.8;
-  font-style: italic;
-}
-
-.about-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.about-card {
+.hero-image {
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(255, 107, 53, 0.2);
 }
 
-::ng-deep .p-card {
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  height: 100%;
+.hero-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
 }
 
-::ng-deep .p-card:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  transform: translateY(-5px);
-}
-
-::ng-deep .p-card-body {
-  padding: 2rem;
-}
-
-.card-icon {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.card-icon i {
-  font-size: 3rem;
-  background: linear-gradient(135deg, #FF6B35 0%, #FFD93D 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: inline-block;
-  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.about-card:hover .card-icon i {
-  transform: scale(1.2) rotate(10deg);
-}
-
-.about-card h2 {
-  background: linear-gradient(135deg, #FF6B35 0%, #FFD93D 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  text-align: center;
-}
-
-.about-card p {
+.hero-tagline {
+  font-size: 1.25rem;
   color: #666;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.stat-item {
-  text-align: center;
-  padding: 1rem;
-  background: linear-gradient(135deg, #FFF5E6 0%, #FFE5CC 100%);
-  border-radius: 10px;
-}
-
-.stat-number {
-  font-size: 2rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, #FF6B35 0%, #FFD93D 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 0.5rem;
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.social-mention {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-  padding: 1rem;
-  background: linear-gradient(135deg, #E1306C 0%, #C13584 100%);
-  color: #FFF;
-  border-radius: 10px;
-}
-
-.social-mention i {
-  font-size: 1.5rem;
-}
-
-.testimonial {
-  margin-top: 1.5rem;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, #FFF8F5 0%, #FFE8D6 100%);
-  border-radius: 10px;
-  border-left: 4px solid #FF6B35;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.1);
-}
-
-.testimonial-content {
-  position: relative;
-}
-
-.testimonial-content i {
-  font-size: 2rem;
-  color: #FF6B35;
-  opacity: 0.3;
-  position: absolute;
-  top: -10px;
-  left: -10px;
-}
-
-.testimonial-content p {
   font-style: italic;
-  color: #2C1810;
-  margin-bottom: 0.5rem;
-  padding-left: 1.5rem;
+  margin: 0;
 }
 
-.testimonial-author {
-  text-align: right;
-  color: #FF6B35;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.values-list {
+.about-blocks {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: 3rem;
 }
 
-.value-item {
+.about-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-block.reverse {
+  direction: rtl;
+}
+
+.about-block.reverse > * {
+  direction: ltr;
+}
+
+.block-image {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.block-image img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.block-content h2 {
+  font-size: 1.5rem;
+  color: #2C1810;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #FF6B35 0%, #FFD93D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.block-content p {
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.stats-row {
   display: flex;
   gap: 1rem;
-  align-items: flex-start;
+  margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
-.value-item i {
-  font-size: 1.5rem;
+.stat {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #FFF5E6 0%, #FFE5CC 100%);
+  border-radius: 50px;
+  font-weight: 600;
   color: #FF6B35;
-  margin-top: 0.25rem;
-  flex-shrink: 0;
-  transition: all 0.3s ease;
+  font-size: 0.9rem;
 }
 
-.value-item:hover i {
-  color: #FFD93D;
-  transform: scale(1.2);
+.about-values {
+  text-align: center;
+  padding: 2rem 0;
 }
 
-.value-item h3 {
+.about-values h2 {
+  font-size: 1.5rem;
   color: #2C1810;
-  margin: 0 0 0.5rem 0;
-  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #FF6B35 0%, #FFD93D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.value-item p {
-  color: #666;
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.value-card {
+  padding: 1.5rem 1rem;
+  background: #FFF;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.12);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(255, 107, 53, 0.25);
+}
+
+.value-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF6B35 0%, #FFD93D 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-icon i {
+  font-size: 1.5rem;
+  color: #FFF;
+}
+
+.value-card span {
+  font-weight: 600;
+  color: #2C1810;
+  font-size: 0.95rem;
+}
+
+.about-celebrity {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #FFF5E6 0%, #FFE8D6 100%);
+  border-radius: 20px;
+}
+
+.celebrity-image {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.celebrity-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.celebrity-text h2 {
+  font-size: 1.4rem;
+  color: #2C1810;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #FF6B35 0%, #FFD93D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.celebrity-text p {
+  color: #555;
   margin: 0;
   line-height: 1.6;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
   .about-section {
-    padding: 3rem 1rem;
+    padding: 2rem 1rem 3rem;
   }
-  
+
   .section-title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.85rem;
   }
-  
-  .about-intro {
-    margin-bottom: 2rem;
+
+  .hero-image img {
+    height: 220px;
   }
-  
-  .intro-text {
+
+  .hero-tagline {
     font-size: 1rem;
   }
-  
-  .about-content {
+
+  .about-block,
+  .about-block.reverse {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    direction: ltr;
+    gap: 1rem;
   }
-  
-  .stats-grid {
+
+  .block-image img {
+    height: 200px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-celebrity {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-  
-  ::ng-deep .p-card-body {
     padding: 1.5rem;
   }
-}
 
+  .celebrity-image img {
+    height: 180px;
+  }
+}

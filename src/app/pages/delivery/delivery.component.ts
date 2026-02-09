@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { LocalizationService } from '../../services/localization.service';
-import { fadeIn, slideInUp } from '../../animations';
+import { fadeIn, slideInUp, slideInLeft, slideInRight } from '../../animations';
 
 @Component({
   selector: 'app-delivery',
@@ -11,7 +11,7 @@ import { fadeIn, slideInUp } from '../../animations';
   imports: [CommonModule, CardModule, ButtonModule],
   templateUrl: './delivery.component.html',
   styleUrl: './delivery.component.css',
-  animations: [fadeIn, slideInUp]
+  animations: [fadeIn, slideInUp, slideInLeft, slideInRight]
 })
 export class DeliveryComponent {
   constructor(public l10n: LocalizationService) {}

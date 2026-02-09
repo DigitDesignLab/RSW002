@@ -1,95 +1,83 @@
 <section class="delivery-section">
-  <div class="container">
-    <h1 class="section-title" @fadeIn>{{ l10n.get('delivery.title') }}</h1>
-    
-    <div class="delivery-intro" @fadeIn>
-      <p>Commandez vos produits préférés et recevez-les rapidement à votre domicile ou bureau</p>
+  <div class="delivery-hero" @fadeIn>
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-icon">
+        <i class="pi pi-truck"></i>
+      </div>
+      <h1>{{ l10n.get('delivery.title') }}</h1>
+      <p>Commandez en un clic, on livre chez vous.</p>
     </div>
-    
-    <div class="delivery-content">
-      <div class="delivery-card" @slideInUp>
-        <p-card>
-          <div class="delivery-icon">
-            <i class="pi pi-truck"></i>
+  </div>
+
+  <div class="container">
+    <div class="delivery-layout">
+      <div class="delivery-visual" @slideInLeft>
+        <div class="visual-card">
+          <img src="https://images.unsplash.com/photo-1526367790999-0150786686a2?w=600" alt="Livraison" />
+          <div class="visual-badge">
+            <i class="pi pi-whatsapp"></i>
+            <span>Commande WhatsApp</span>
           </div>
-          <h2>{{ l10n.get('delivery.title') }}</h2>
-          <p>{{ l10n.get('delivery.description') }}</p>
-          <p>
-            Notre service de livraison est disponible dans toute la zone de Sebenikoro et ses environs. 
-            Nous nous engageons à vous livrer vos commandes dans les meilleurs délais, tout en préservant 
-            la fraîcheur et la qualité de nos produits.
-          </p>
-          
-          <div class="delivery-zones">
-            <h3>Zones de livraison</h3>
-            <div class="zones-grid">
-              <div class="zone-item">
-                <i class="pi pi-map-marker"></i>
-                <span>Sebenikoro</span>
-              </div>
-              <div class="zone-item">
-                <i class="pi pi-map-marker"></i>
-                <span>ACI 2000</span>
-              </div>
-              <div class="zone-item">
-                <i class="pi pi-map-marker"></i>
-                <span>Hamdallaye</span>
-              </div>
-              <div class="zone-item">
-                <i class="pi pi-map-marker"></i>
-                <span>Quartiers proches</span>
-              </div>
+        </div>
+      </div>
+
+      <div class="delivery-info" @slideInRight>
+        <p class="delivery-desc">{{ l10n.get('delivery.description') }}</p>
+        <p class="delivery-zones-label">Zones livrées</p>
+        <div class="zones-pills">
+          <span class="pill">Sebenikoro</span>
+          <span class="pill">ACI 2000</span>
+          <span class="pill">Hamdallaye</span>
+          <span class="pill">Quartiers proches</span>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <strong>Menu</strong>
+              <span>Choisissez vos produits</span>
             </div>
           </div>
-          
-          <ul class="delivery-features">
-            <li><i class="pi pi-check-circle"></i> Livraison rapide et fiable (30-60 min)</li>
-            <li><i class="pi pi-check-circle"></i> Commandes via WhatsApp en quelques clics</li>
-            <li><i class="pi pi-check-circle"></i> Produits frais garantis, préparés le jour même</li>
-            <li><i class="pi pi-check-circle"></i> Service disponible tous les jours de 06h00 à 23h00</li>
-            <li><i class="pi pi-check-circle"></i> Paiement à la livraison ou en ligne</li>
-            <li><i class="pi pi-check-circle"></i> Suivi de commande en temps réel</li>
-          </ul>
-          
-          <div class="delivery-steps">
-            <h3>Comment commander ?</h3>
-            <div class="steps-list">
-              <div class="step-item">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                  <h4>Consultez notre menu</h4>
-                  <p>Parcourez notre sélection de produits frais</p>
-                </div>
-              </div>
-              <div class="step-item">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                  <h4>Commandez via WhatsApp</h4>
-                  <p>Envoyez-nous votre commande avec vos coordonnées</p>
-                </div>
-              </div>
-              <div class="step-item">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                  <h4>Recevez votre commande</h4>
-                  <p>Livraison rapide à votre adresse</p>
-                </div>
-              </div>
+          <div class="step-arrow"><i class="pi pi-arrow-right"></i></div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <strong>WhatsApp</strong>
+              <span>Envoyez votre commande</span>
             </div>
           </div>
-          
-          <div class="delivery-button">
-            <p-button 
-              [label]="l10n.get('delivery.whatsapp')" 
-              icon="pi pi-whatsapp"
-              (onClick)="orderViaWhatsApp()"
-              [style]="{'width': '100%', 'padding': '1rem'}"
-              styleClass="p-button-success">
-            </p-button>
+          <div class="step-arrow"><i class="pi pi-arrow-right"></i></div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-text">
+              <strong>Livraison</strong>
+              <span>Reception à domicile</span>
+            </div>
           </div>
-        </p-card>
+        </div>
+
+        <button class="cta-whatsapp" (click)="orderViaWhatsApp()">
+          <i class="pi pi-whatsapp"></i>
+          {{ l10n.get('delivery.whatsapp') }}
+        </button>
+      </div>
+    </div>
+
+    <div class="delivery-features" @slideInUp>
+      <div class="feature">
+        <i class="pi pi-clock"></i>
+        <span>30–60 min</span>
+      </div>
+      <div class="feature">
+        <i class="pi pi-check-circle"></i>
+        <span>Produits frais</span>
+      </div>
+      <div class="feature">
+        <i class="pi pi-calendar"></i>
+        <span>06h–23h</span>
       </div>
     </div>
   </div>
 </section>
-

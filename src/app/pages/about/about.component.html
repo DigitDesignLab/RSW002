@@ -1,137 +1,71 @@
 <section class="about-section">
   <div class="container">
     <h1 class="section-title" @fadeIn>{{ l10n.get('about.title') }}</h1>
-    
-    <div class="about-intro" @fadeIn>
-      <p class="intro-text">
-        Découvrez l'histoire de La Boulangerie Pâtisserie Sofia, un établissement qui allie tradition, 
-        qualité et innovation pour vous offrir les meilleurs produits de boulangerie et pâtisserie à Bamako.
-      </p>
+
+    <div class="about-hero" @fadeIn>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200" alt="Boulangerie Pâtisserie Sofia" />
+      </div>
+      <p class="hero-tagline">Tradition, qualité et passion à Sebenikoro.</p>
     </div>
-    
-    <div class="about-content">
-      <div class="about-card" @slideInLeft>
-        <p-card>
-          <div class="card-icon">
-            <i class="pi pi-book"></i>
-          </div>
+
+    <div class="about-blocks">
+      <div class="about-block" @slideInLeft>
+        <div class="block-image">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600" alt="Nos créations" />
+        </div>
+        <div class="block-content">
           <h2>{{ l10n.get('about.story') }}</h2>
-          <p>
-            La Boulangerie Pâtisserie Sofia est née de la passion pour l'art de la boulangerie et de la pâtisserie. 
-            Située au cœur de Sebenikoro à Bamako, notre établissement propose des produits frais, 
-            préparés quotidiennement avec des ingrédients de qualité supérieure.
-          </p>
-          <p>
-            Depuis notre ouverture, nous nous efforçons de créer des moments de bonheur à travers 
-            nos délicieuses créations, en combinant les techniques traditionnelles avec une touche moderne. 
-            Chaque jour, nos artisans boulangers et pâtissiers mettent tout leur savoir-faire pour 
-            vous offrir des produits d'exception.
-          </p>
-          <p>
-            Notre engagement envers la qualité et la fraîcheur fait de nous une référence dans le quartier. 
-            Nous sélectionnons rigoureusement nos matières premières et suivons des recettes authentiques 
-            pour garantir une expérience gustative inoubliable.
-          </p>
-        </p-card>
+          <p>Produits frais, préparés chaque jour au cœur de Bamako. Une équipe passionnée pour vous régaler.</p>
+        </div>
       </div>
-      
-      <div class="about-card" @slideInRight>
-        <p-card>
-          <div class="card-icon">
-            <i class="pi pi-star"></i>
-          </div>
+
+      <div class="about-block reverse" @slideInRight>
+        <div class="block-image">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600" alt="Pâtisseries" />
+        </div>
+        <div class="block-content">
           <h2>{{ l10n.get('about.popularity') }}</h2>
-          <p>
-            Notre établissement est devenu une référence à Bamako, très apprécié sur les réseaux sociaux 
-            comme Instagram et TikTok. Nous sommes fiers d'être reconnus comme l'un des meilleurs 
-            établissements de la ville.
-          </p>
-          <div class="stats-grid">
-            <div class="stat-item">
-              <div class="stat-number">500+</div>
-              <div class="stat-label">Clients satisfaits</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">28</div>
-              <div class="stat-label">Produits disponibles</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">17h</div>
-              <div class="stat-label">Heures d'ouverture/jour</div>
-            </div>
+          <p>Très suivis sur Instagram et TikTok. Reconnus comme l’un des meilleurs établissements de la ville.</p>
+          <div class="stats-row">
+            <span class="stat">500+ clients</span>
+            <span class="stat">28 produits</span>
+            <span class="stat">06h–23h</span>
           </div>
-          <div class="social-mention">
-            <i class="pi pi-instagram"></i>
-            <span>Suivez-nous sur Instagram pour découvrir nos créations quotidiennes</span>
-          </div>
-        </p-card>
+        </div>
       </div>
-      
-      <div class="about-card" @slideInUp>
-        <p-card>
-          <div class="card-icon">
-            <i class="pi pi-users"></i>
+
+      <div class="about-values" @slideInUp>
+        <h2>Nos valeurs</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon"><i class="pi pi-star"></i></div>
+            <span>Qualité</span>
           </div>
+          <div class="value-card">
+            <div class="value-icon"><i class="pi pi-sun"></i></div>
+            <span>Fraîcheur</span>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><i class="pi pi-heart"></i></div>
+            <span>Passion</span>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><i class="pi pi-users"></i></div>
+            <span>Accueil</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-celebrity" @slideInUp>
+        <div class="celebrity-image">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500" alt="Ambiance" />
+        </div>
+        <div class="celebrity-text">
           <h2>{{ l10n.get('about.celebrities') }}</h2>
-          <p>
-            Nous avons eu l'honneur d'accueillir de nombreuses personnalités, notamment le célèbre 
-            artiste malien Sidiki Diabaté, qui a partagé son expérience dans notre établissement 
-            avec ses milliers de followers.
-          </p>
-          <p>
-            Ces visites témoignent de la qualité de nos produits et de l'ambiance chaleureuse 
-            que nous offrons à tous nos clients. Nous sommes fiers de compter parmi nos clients 
-            des personnalités publiques qui apprécient notre savoir-faire.
-          </p>
-          <div class="testimonial">
-            <div class="testimonial-content">
-              <i class="pi pi-quote-left"></i>
-              <p>"Un établissement exceptionnel avec des produits de qualité. Je recommande vivement !"</p>
-              <div class="testimonial-author">- Client satisfait</div>
-            </div>
-          </div>
-        </p-card>
-      </div>
-      
-      <div class="about-card" @slideInUp>
-        <p-card>
-          <div class="card-icon">
-            <i class="pi pi-heart"></i>
-          </div>
-          <h2>Nos valeurs</h2>
-          <div class="values-list">
-            <div class="value-item">
-              <i class="pi pi-check-circle"></i>
-              <div>
-                <h3>Qualité</h3>
-                <p>Des ingrédients sélectionnés avec soin pour garantir la meilleure qualité</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <i class="pi pi-check-circle"></i>
-              <div>
-                <h3>Fraîcheur</h3>
-                <p>Produits préparés quotidiennement pour une fraîcheur optimale</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <i class="pi pi-check-circle"></i>
-              <div>
-                <h3>Tradition</h3>
-                <p>Respect des techniques traditionnelles de boulangerie et pâtisserie</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <i class="pi pi-check-circle"></i>
-              <div>
-                <h3>Innovation</h3>
-                <p>Une touche moderne pour des créations uniques et savoureuses</p>
-              </div>
-            </div>
-          </div>
-        </p-card>
+          <p>Des personnalités comme Sidiki Diabaté nous font confiance. Venez découvrir l’ambiance Sofia.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
