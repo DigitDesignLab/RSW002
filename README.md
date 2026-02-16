@@ -78,6 +78,21 @@ src/
 └── styles.css                 # Styles globaux
 ```
 
+## 🚀 Déploiement sur Vercel
+
+1. Poussez le code sur **GitHub** (ou GitLab / Bitbucket).
+2. Sur [vercel.com](https://vercel.com) : **Add New Project** → importez le dépôt → **Deploy**.
+
+Ou en CLI :
+```bash
+npm i -g vercel
+vercel
+vercel --prod
+```
+
+Si les pages (ex. `/menu`) renvoient 404, changez dans `vercel.json` :
+`"outputDirectory": "dist/BoulangerieSofia"` → `"dist/BoulangerieSofia/browser"`.
+
 ## 🎯 Optimisations
 
 - Lazy loading des modules
